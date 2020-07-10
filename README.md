@@ -41,7 +41,7 @@ The mechanical push button may produce errors in switching therefore we have wri
 
 ### Circuit
 The display pins, SDA is connected to the A4 pin (SDA0) of teensy and SCL is connected to the A5(SCL0) pin. 3.3V and GND are also connected as per pinout. The push button is connected to the D5 and D6 pin of Teensy 3.2 and GND pin. A14 used as DAC pin for function generator mode. 
-It is also explained in this [Youtube video](https://youtu.be/nFGAEsI4nOw)
+It is also explained in this [Youtube video](https://youtu.be/nFGAEsI4nOw).
 Connection Schematic
 ![Connection Schematic](https://github.com/jomaljose/logic_analyser/blob/master/media/Schematic.png)
 ![Breadboard connection](https://github.com/jomaljose/logic_analyser/blob/master/media/circuit.jpg)
