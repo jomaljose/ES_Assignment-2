@@ -28,7 +28,7 @@ The project is of finite states so that we can design it as a finite state machi
 
 #### Adafruit OLED display
 
-The operating voltage of the SSD1306 controller is from 1.65V to 3.3V.It can communicate using I2C or SPI. I2C is used in this project. SDA is connected to the A4 pin (SDA0) of teensy and SCL is connected to the A5(SCL0) pin. 3.3V and GND are also connected as per pinout.
+The operating voltage of the SSD1306 controller is from 1.65V to 3.3V. It can communicate using I2C or SPI. I2C is used in this project. SSD1306 driver has a built-in 1KB Graphic Display Data RAM (GDDRAM) for the screen which holds the bit pattern to be displayed. This 1K memory area is organized in 8 pages (from 0 to 7). Each page contains 128 columns/segments (block 0 to 127). And each column can store 8 bits of data (from 0 to 7). SDApin of display is connected to the A4 pin (SDA0) of teensy and SCL is connected to the A5(SCL0) pin. 3.3V and GND are also connected as per pinout.
 #### Pull up resistor calculation for display
 
 
@@ -40,8 +40,10 @@ Resistor selection varies with devices on the bus, but a good rule of thumb is t
 The mechanical push button may produce errors in switching therefore we have written codes for debouncing and enabled input pullup resistor internally in teensy 3.2.
 
 ### Circuit
-The display pins, SDA is connected to the A4 pin (SDA0) of teensy and SCL is connected to the A5(SCL0) pin. 3.3V and GND are also connected as per pinout. The push button is connected to the D5 and D6 pin of Teensy 3.2 and GND pin. A14 used as DAC pin for function generator mode. A0 is connected with a 10K ohm pot for giving a sample input to oscilloscope mode.
+The display pins, SDA is connected to the A4 pin (SDA0) of teensy and SCL is connected to the A5(SCL0) pin. 3.3V and GND are also connected as per pinout. The push button is connected to the D5 and D6 pin of Teensy 3.2 and GND pin. A14 used as DAC pin for function generator mode. 
 It is also explained in this [Youtube video](https://youtu.be/nFGAEsI4nOw)
-
+Connection Schematic
+![Connection Schematic](https://github.com/jomaljose/logic_analyser/blob/master/media/Schematic.png)
 ![Breadboard connection](https://github.com/jomaljose/logic_analyser/blob/master/media/circuit.jpg)
-
+A0 is connected with a 10K ohm pot for giving a sample input to oscilloscope mode.
+![Additional circuit](https://github.com/jomaljose/logic_analyser/blob/master/media/Additional%20circuit%20for%20osci.jpg)
