@@ -34,7 +34,7 @@ The operating voltage of the SSD1306 controller is from 1.65V to 3.3V. It can co
 
 "I2C bus drivers are  "open drain", meaning that they can pull the corresponding signal line low, but cannot drive it high. Thus, there can be no bus contention where one device is trying to drive the line high while another tries to pull it low, eliminating the potential for damage to the drivers or excessive power dissipation in the system. Each signal line has a  pull-up resistor on it, to restore the signal to high when no device is asserting it low.
 
-Resistor selection varies with devices on the bus, but a good rule of thumb is to start with **4.7kΩ resistor and adjust down if necessary**. I2C is a fairly robust protocol, and can be used with short runs of wire (2-3m). For long runs, or systems with lots of devices, smaller resistors are better." - [([1]"I2C," n.d.)](https://learn.sparkfun.com/tutorials/i2c/i2c-at-the-hardware-level)
+Resistor selection varies with devices on the bus, but a good rule of thumb is to start with **4.7kΩ resistor and adjust down if necessary**. I2C is a fairly robust protocol, and can be used with short runs of wire (2-3m). For long runs, or systems with lots of devices, smaller resistors are better." - [([2]"I2C," n.d.)](https://learn.sparkfun.com/tutorials/i2c/i2c-at-the-hardware-level)
 #### Push Button
 
 The mechanical push button may produce errors in switching therefore we have written codes for debouncing and enabled input pullup resistor internally in teensy 3.2.
